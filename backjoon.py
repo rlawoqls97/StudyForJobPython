@@ -90,4 +90,42 @@
 #     a, b = map(int, input().split())
 #     print("Case #%s: %s + %s = %s"%(i + 1, a, b, a + b))
 
-#2438
+#10818
+# num = int(input())
+# number = list(map(int, input().split()))
+# print(min(number), max(number))
+
+#2562
+# number = []
+# for i in range(0, 9):
+#     number.append(int(input()))
+# max = max(number)
+# print(max)
+# print(number.index(max) + 1)
+
+#2577
+# n1 = int(input())
+# n2 = int(input())
+# n3 = int(input())
+# result = list(str(n1 * n2 * n3))
+# for i in range(10):
+#     print(result.count(str(i)))
+
+#3052
+# number = []
+# result = []
+# for i in range(10):
+#     number.append(int(input()))
+#     result.append(number[i] % 42)
+# result = set(result)
+# print(len(result))
+
+#1546
+# num = int(input())
+# number = list(map(int, input().split()))
+# max = max(number)
+# list = []
+# for s in number:
+#     list.append(s / max * 100)
+# avg = sum(list) / num
+# print(avg)
