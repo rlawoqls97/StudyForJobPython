@@ -129,5 +129,3 @@
 #     list.append(s / max * 100)
 # avg = sum(list) / num
 # print(avg)
-
-#오류 그만 떠라
