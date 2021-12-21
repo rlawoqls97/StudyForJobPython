@@ -178,7 +178,6 @@
 #             one.append(one[i - 1] + one[i - 2])
 #     print('{} {}'.format(zero[x], one[x]))
 # N = int(input())
-
 # for _ in range(N):
 #     Fibo(int(input()))
 
@@ -195,3 +194,14 @@
 #     dp.append(dp[i - 1] + dp[i - 2])
 # n = int(input())
 # print(dp[n] % 10007)
+
+#1149
+N = int(input())
+dp =[]
+for i in range(N):
+    dp.append(list(map(int, input().split())))
+for i in range(1, len(dp)):
+    dp[i][0] = min(dp[i - 1][1], dp[i - 1][2]) + dp[i][0]
+    dp[i][1] = min(dp[i - 1][0], dp[i - 1][2]) + dp[i][1]
+    dp[i][2] = min(dp[i - 1][0], dp[i - 1][1]) + dp[i][2]
+print(min(dp[N - 1][0], dp[N - 1][1], dp[N - 1][2]))
