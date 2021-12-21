@@ -129,3 +129,69 @@
 #     list.append(s / max * 100)
 # avg = sum(list) / num
 # print(avg)
+
+#2839
+# sugar = int(input())
+# result = 0
+# while sugar != 0:
+#     if sugar < 0:
+#         result = -1
+#         break
+# 
+#     if (sugar % 5) == 0:
+#         result = result + (sugar // 5)
+#         sugar = 0
+#     else:
+#         sugar -= 3
+#         result += 1
+# print(result)
+
+#10870 
+# def Fibo(x):
+#     if x <= 1:
+#         return x
+#     else:
+#         return Fibo(x - 1) + Fibo(x - 2)
+# fibo = int(input())
+# print(Fibo(fibo))
+
+#1463
+# n = int(input())
+# dp = [0, 0, 1, 1]
+# for i in range(4, n + 1):
+#     dp.append(dp[i - 1] + 1)
+#     print(dp)
+#     if i % 2 == 0:
+#         dp[i] = min(dp[i // 2] + 1, dp[i])
+#     if i % 3 == 0:
+#         dp[i] = min(dp[i // 3] + 1, dp[i])
+# print(dp[n])
+
+#1003
+# zero = [1, 0, 1]
+# one = [0, 1, 1]
+# def Fibo(x):
+#     length = len(zero)
+#     if x >= length:
+#         for i in range(length, x + 1):
+#             zero.append(zero[i - 1] + zero[i - 2])
+#             one.append(one[i - 1] + one[i - 2])
+#     print('{} {}'.format(zero[x], one[x]))
+# N = int(input())
+
+# for _ in range(N):
+#     Fibo(int(input()))
+
+#9095
+# dp = [0, 1, 2, 4]
+# for _ in range(4, 12):
+#     dp.append(sum(dp[-3:]))
+# for _ in range(int(input())):
+#     print(dp[int(input())])
+
+#11726
+# dp = [0, 1, 2]
+# for i in range(3, 1001):
+#     dp.append(dp[i - 1] + dp[i - 2])
+# n = int(input())
+# print(dp[n] % 10007)
