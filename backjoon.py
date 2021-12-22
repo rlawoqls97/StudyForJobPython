@@ -224,3 +224,29 @@
 # for i in range(3, N):
 #     dp.append(max(dp[i - 3] + stairs[i - 1] + stairs[i], dp[i - 2] + stairs[i]))
 # print(dp[-1]) # list 에서 -1의 index를 주게 되면 가장 마지막 값을 가져온다.
+
+#11053
+# n = int(input())
+# a = list(map(int, input().split()))
+# dp = [0 for i in range(n)]
+# for i in range(n):
+#     for j in range(i):
+#         if a[i] > a[j] and dp[i] < dp[j]:
+#             dp[i] = dp[j]
+#     dp[i] += 1
+# print(max(dp))
+
+#1932
+n = int(input())
+dp = []
+for i in range(n):
+    dp.append(list(map(int, input().split())))
+for i in range(1, n):
+    for j in range(i + 1):
+        if j == 0:
+            dp[i][0] = dp[i - 1][0] + dp[i][0]
+        elif i == j:
+            dp[i][j] = dp[i - 1][j - 1] + dp[i][j]
+        else:
+            dp[i][j] = max(dp[i - 1][j - 1] + dp[i][j], dp[i - 1][j] + dp[i][j])
+print(max(dp[n - 1]))
